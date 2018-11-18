@@ -6,7 +6,7 @@ module.exports = {
      */
     paginate: function (custObj, pageQuery) {
         let {page, size} = pageQuery
-        // Default Page Size is 10
+        // Default Page Size is set to 10
         if(!pageQuery.hasOwnProperty('size')) {
             size = 10
         }
@@ -29,7 +29,6 @@ module.exports = {
         }
         let filterResult = []
         for (let i=0; i < custObj.length; i++) {
-            let objResult = []
             let resultFlag = false
             for (let j = 0; j < filterBody.length; j++) {
                 const filterObj = filterBody[j];
@@ -49,6 +48,7 @@ module.exports = {
      * @param  {Object} sortBody
      */
     sortBy: function (custObj, sortBody) {
+        // Assumption : Max Fields that can be sorted is 3 and depends on the request fields order in the payload.
         custObj.sort(function(a, b){
             if(a[sortBody[0]['field']] == b[sortBody[0]['field']]){
                 if(sortBody.length > 1 && a[sortBody[1]['field']] == b[sortBody[1]['field']]){

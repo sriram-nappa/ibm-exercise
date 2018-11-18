@@ -1,6 +1,7 @@
 const express =  require('express')
 const coreMethods = require('./utils/core')
-const json_data = require('../data/sample.json')
+let json_data = require('../data/sample.json')
+const fs = require('fs')
 const app = express()
 const port = process.env.PORT || 3000 
 
@@ -44,6 +45,28 @@ app.post('/api/customers', (req, res) => {
             res.send(pageData)
         }
     }
+})
+
+// Adds a new record
+app.post('/api/addRecord', (req, res) => {
+    if(!req.body.first_name || !req.body.last_name || !req.body.age) {
+        res.status(400).send('First Name, Last Name and Age is required.')
+        return;
+    }
+    const {first_name, last_name, age} = req.body
+    const recordObj = {
+        id: json_data.length + 1,
+        first_name: first_name,
+        last_name: last_name,
+        age: age,
+        email: req.body.email || "",
+        gender: req.body.gender || ""
+    }
+    json_data.push(recordObj)
+    res.send(recordObj)
+    fs.writeFile('../data/sample.json', JSON.stringify(json_data), 'utf8', (error) => {
+        console.log("Write Error")
+    })
 })
 
 // Default Route
