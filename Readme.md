@@ -29,11 +29,11 @@ This web application is created as a part of IBM's interview process. The web ap
     
 #### 1. /api
     
-  This function returns all the data in the json file.
+  This route returns all the data in the json file.
         
 #### 2. /api/customers
     
-There are GET and POST calls that can be made to this endpoint:
+  There are GET and POST calls that can be made to this endpoint:
   
 **GET: (Parameters : page, size)**
 
@@ -109,10 +109,13 @@ last_name in descending order. If the last names are equal too, it sorts based o
 
 **IMPORTANT: A maximum of 3 columns can only be sorted at any given point.**
     
-    
+#### 2. /api/customers
+ 
  
     
-### Utility Functions (Operations for Filter)
+### Utility Functions
+
+**(Operations for Filter)**
 
 **1. starts-with:**
 
