@@ -22,7 +22,8 @@ This web application is created as a part of IBM's interview process. The web ap
 ### Usage
 
 - cd server
-- node index.js (Now the server should have started listening on Port 3000)
+- npm install
+- node app.js (Now the server should have started listening on Port 3000)
 - Using curl/postman or any application, send POST/GET requests to the endpoints
 
 ### Endpoints
@@ -164,4 +165,8 @@ last_name in descending order. If the last names are equal too, it sorts based o
 
 | Version   | Description   |
 |:---------:|:--------------|
-| 1.0.0     |  A basic web application which has 2 routes to paginate, filter and sort a given set of JSON data  |
+| 1.0.0     |  A basic web application which has 3 routes to paginate, filter and sort a given set of JSON data  |
+
+### Author:
+
+  - Sriram Poondi Chinappa
