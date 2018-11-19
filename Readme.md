@@ -5,8 +5,8 @@ This web application is created as a part of IBM's interview process. The web ap
 
 ## Minimum Requirements:
 
-- nodejs
-- curl 
+- nodejs/npm
+- Postman or any REST Client 
 
 
 ## Table of Contents
@@ -59,20 +59,20 @@ The response can be filtered based on multiple parameters such as starts-with, e
 
 Filter is applied only when there exists an object with key "filter" in the request body. The value of "filter" can
 be a list of objects with keys "field", "operator" and "value".
-
-"field" : The field on which filter has to be applied.
-"operator": The filter operation to be applied on the given field. (Look at Operators section)
-"value" : The value against which the given data has to be filtered.
+**Below keys are case-sensitive**
+- "field" : The field on which filter has to be applied.
+- "operator": The filter operation to be applied on the given field. Look at [Utility Functions](#utility-functions)
+- "value" : The value against which the given data has to be filtered.
     
     Eg:  
     
-    {
-       "filter": [
-            {"field": "first_name", "operator": "starts-with", "value": "Aar"},
-            {"field": "age", "operator": "greater-than", "value": 21},
-            {"field": "first_name", "operator": "starts-with", "value": "C"},
-	   ]  
-    } 
+	    {
+	       "filter": [
+		    {"field": "first_name", "operator": "starts-with", "value": "Aar"},
+		    {"field": "age", "operator": "greater-than", "value": 21},
+		    {"field": "first_name", "operator": "starts-with", "value": "C"},
+		   ]  
+	    } 
     
 The above filter would return all records that have First Name beginning with "Aar" and last name beginning with "C". 
 All string operations done on the filter is NOT CASE-SENSITIVE.
@@ -108,8 +108,8 @@ a list of objects with the following keys: "field", "sortingType"
       ]
     }
 	
-The above example sorts hte first_name in ascending order. If there are two first_name with the same value, then it sorts it based on 
-last_name in descending order. If the last names are equal too, it sorts based on the agein descending order.
+The above example sorts the first_name in ascending order. If there are two first_name with the same value, then it sorts it based on 
+last_name in descending order. If the last names are equal, it sorts based on the age in descending order.
 
 **IMPORTANT: A maximum of 3 columns can only be sorted at any given point.**
     
@@ -132,6 +132,7 @@ last_name in descending order. If the last names are equal too, it sorts based o
 ### Utility Functions
 
 **(Operations for Filter)**
+**Below keys are case-sensitive**
 
 **1. starts-with:**
 
@@ -147,17 +148,16 @@ last_name in descending order. If the last names are equal too, it sorts based o
    
  **4. greater-than:**
 
-   Returns the list of objects whose value of the given field is greater then the user input.
+   Returns the list of objects whose value of the given field is greater than the user input.
    
  **5. less-than:**
 
-   Returns the list of objects which starts with the given string. 
+   Returns the list of objects whose value of the given field is less than the user input. 
    
 
 ### Future Improvements:
 
-- The operations can be performed on the given set of data by multiprocessing. 
-- More utitily functions could be added for doing CRUD operations on the data.
+- More utility functions could be added for doing CRUD operations on the data.
 - The results could be cached using an in-memory database
 
 
