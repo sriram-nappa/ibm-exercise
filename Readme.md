@@ -5,8 +5,8 @@ This web application is created as a part of IBM's interview process. The web ap
 
 ## Minimum Requirements:
 
-- nodejs
-- curl 
+- nodejs/npm
+- Postman or any REST Client 
 
 
 ## Table of Contents
