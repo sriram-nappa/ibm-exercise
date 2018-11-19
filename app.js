@@ -71,7 +71,7 @@ app.post('/api/addRecord', (req, res) => {
 
 // Default Route
 app.get('/', (req, res) => {
-    res.send('Use /api/customers or /api/utils to access the REST endpoints. For payload options, refer docs')
+    res.send('Use /api or /api/customers to access the REST endpoints. For payload options, refer docs')
 })
 
 app.listen(port)
