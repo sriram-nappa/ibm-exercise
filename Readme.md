@@ -59,7 +59,7 @@ The response can be filtered based on multiple parameters such as starts-with, e
 
 Filter is applied only when there exists an object with key "filter" in the request body. The value of "filter" can
 be a list of objects with keys "field", "operator" and "value".
-
+**Below keys are case-sensitive**
 - "field" : The field on which filter has to be applied.
 - "operator": The filter operation to be applied on the given field. Look at [Utility Functions](#utility-functions)
 - "value" : The value against which the given data has to be filtered.
@@ -132,6 +132,7 @@ last_name in descending order. If the last names are equal, it sorts based on th
 ### Utility Functions
 
 **(Operations for Filter)**
+**Below keys are case-sensitive**
 
 **1. starts-with:**
 
