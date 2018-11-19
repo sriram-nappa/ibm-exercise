@@ -108,8 +108,8 @@ a list of objects with the following keys: "field", "sortingType"
       ]
     }
 	
-The above example sorts hte first_name in ascending order. If there are two first_name with the same value, then it sorts it based on 
-last_name in descending order. If the last names are equal too, it sorts based on the agein descending order.
+The above example sorts the first_name in ascending order. If there are two first_name with the same value, then it sorts it based on 
+last_name in descending order. If the last names are equal, it sorts based on the age in descending order.
 
 **IMPORTANT: A maximum of 3 columns can only be sorted at any given point.**
     
@@ -156,8 +156,7 @@ last_name in descending order. If the last names are equal too, it sorts based o
 
 ### Future Improvements:
 
-- The operations can be performed on the given set of data by multiprocessing. 
-- More utitily functions could be added for doing CRUD operations on the data.
+- More utility functions could be added for doing CRUD operations on the data.
 - The results could be cached using an in-memory database
 
 
