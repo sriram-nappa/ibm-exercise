@@ -147,11 +147,11 @@ last_name in descending order. If the last names are equal too, it sorts based o
    
  **4. greater-than:**
 
-   Returns the list of objects whose value of the given field is greater then the user input.
+   Returns the list of objects whose value of the given field is greater than the user input.
    
  **5. less-than:**
 
-   Returns the list of objects which starts with the given string. 
+   Returns the list of objects whose value of the given field is less than the user input. 
    
 
 ### Future Improvements:
