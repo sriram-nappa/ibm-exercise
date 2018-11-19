@@ -50,14 +50,8 @@ If the page number is 0 or if it exceeds the maximum number of pages possible fo
     
     
 **POST:**
-
-##### FilterBy method:
-
-The response can be filtered based on multiple parameters such as starts-with, equals, contains, greater-than, less-than.
 	 
-	
-###### Request Body:
- 	/api/customers   [POST]
+	 /api/customers   [POST]
 	 Request body example:
 	 {
 	  "filter": [
@@ -89,6 +83,13 @@ The response can be filtered based on multiple parameters such as starts-with, e
 	
 ** Above payload can be used either with sort or filter at a time and also works when both sort/filter is used as mentioned above.**
 	
+##### FilterBy method:
+
+The response can be filtered based on multiple parameters such as starts-with, equals, contains, greater-than, less-than.
+	 
+	
+###### Request Body:
+ 	
 Filter is applied only when there exists an object with key "filter" in the request body. The value of "filter" can
 be a list of objects with keys "field", "operator" and "value".
 **Below keys are case-sensitive**
