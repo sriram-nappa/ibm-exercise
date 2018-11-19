@@ -1,6 +1,6 @@
 const express =  require('express')
 const coreMethods = require('./utils/core')
-let json_data = require('../data/sample.json')
+let json_data = require('./data/sample.json')
 const fs = require('fs')
 const app = express()
 const port = process.env.PORT || 3000 
