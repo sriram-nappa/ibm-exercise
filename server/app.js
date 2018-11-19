@@ -39,7 +39,7 @@ app.post('/api/customers', (req, res) => {
             pageData = coreMethods.sortBy(pageData, reqBody['sort'])
         }
         // Paginate
-        if(query) {
+        if(Object.keys(query).length) {
             res.send(coreMethods.paginate(pageData, req.query))
         } else {
             res.send(pageData)
