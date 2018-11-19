@@ -90,27 +90,42 @@ a list of objects with the following keys: "field", "sortingType"
 "sortingType" : The values can be either "asc" or "desc" (lowercase)
     
     Eg:
-        "sort": [{
-			"field": "first_name",
-			"sortType": "asc"
-		},
-		{
-			"field": "last_name",
-			"sortType": "desc"
-		},
-		{
-			"field": "age",
-			"sortType": "desc"
-		}
-	]
+    
+    {
+      "sort": [{
+          "field": "first_name",
+          "sortType": "asc"
+        },
+        {
+          "field": "last_name",
+          "sortType": "desc"
+        },
+        {
+          "field": "age",
+          "sortType": "desc"
+        }
+      ]
+    }
 	
 The above example sorts hte first_name in ascending order. If there are two first_name with the same value, then it sorts it based on 
 last_name in descending order. If the last names are equal too, it sorts based on the agein descending order.
 
 **IMPORTANT: A maximum of 3 columns can only be sorted at any given point.**
     
-#### 2. /api/customers
- 
+#### 3. /api/addRecord
+
+    This route adds a new record to the file.
+    
+    Example request body:
+      {
+        "first_name":"Sriram",
+        "last_name":"PC",
+        "age": 26,
+        "gender": "Male",
+        "email" : "abc@gmail.com"
+      }
+
+    Attributes first_name, last_name and age are considered as mandatory fields.
  
     
 ### Utility Functions
