@@ -21,9 +21,8 @@ This web application is created as a part of IBM's interview process. The web ap
 
 ### Usage
 
-- cd server
 - npm install
-- node app.js (Now the server should have started listening on Port 3000)
+- npm start (Now the server should have started listening on Port 3000)
 - Using curl/postman or any application, send POST/GET requests to the endpoints
 
 ### Endpoints
