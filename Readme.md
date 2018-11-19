@@ -66,13 +66,13 @@ be a list of objects with keys "field", "operator" and "value".
     
     Eg:  
     
-    {
-       "filter": [
-            {"field": "first_name", "operator": "starts-with", "value": "Aar"},
-            {"field": "age", "operator": "greater-than", "value": 21},
-            {"field": "first_name", "operator": "starts-with", "value": "C"},
-	   ]  
-    } 
+	    {
+	       "filter": [
+		    {"field": "first_name", "operator": "starts-with", "value": "Aar"},
+		    {"field": "age", "operator": "greater-than", "value": 21},
+		    {"field": "first_name", "operator": "starts-with", "value": "C"},
+		   ]  
+	    } 
     
 The above filter would return all records that have First Name beginning with "Aar" and last name beginning with "C". 
 All string operations done on the filter is NOT CASE-SENSITIVE.
